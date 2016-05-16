@@ -1,0 +1,25 @@
+{
+  "name": "workout-tracker",
+  "version": "1.0.0",
+  "description": "Run statistics on workouts entered. Import and Export your data, so you always have access to it.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SherylHohman/stork-power.git"
+  },
+  "keywords": [
+    "workout",
+    "statistics",
+    "goal",
+    "visualizations"
+  ],
+  "author": "Sheryl Hohman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SherylHohman/stork-power/issues"
+  },
+  "homepage": "https://github.com/SherylHohman/stork-power#readme"
+}
