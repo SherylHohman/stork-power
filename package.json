@@ -14,7 +14,11 @@
     "workout",
     "statistics",
     "goal",
-    "visualizations"
+    "visualizations",
+    "thesis",
+    "stork-power",
+    "workout-tracker",
+    "SPA-solo"
   ],
   "author": "Sheryl Hohman",
   "license": "ISC",
