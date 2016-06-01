@@ -1,3 +1,3 @@
 exports.sanitize = function(word) {
-  return word.toLowerCase();
+  return word.toLowerCase().replace(/-/g, ' ');
 }
