@@ -4,7 +4,7 @@
   "description": "Run statistics on workouts entered. Import and Export your data, so you always have access to it.",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "mocha && mocha test --require blanket --reporter html-cov > coverage.html"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/SherylHohman/stork-power#readme",
   "devDependencies": {
+    "blanket": "^1.2.3",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.17.0",
@@ -36,5 +37,11 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": ["index.js"],
+      "data-cover-never": "node_modules"
+    }
   }
 }
