@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = require('chai').expect;
-var word = require('../index.js');
+var word = require('../index');
 
 describe('Sanitize', function(){
   // Hooks: initialize database before, close files after tests, etc
