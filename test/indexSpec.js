@@ -31,8 +31,10 @@ describe('Sanitize', function(){
 });
 
 describe('Tokenize', function(){
-  var sentence = "hello world";
-  var tokenizedSentence = word.tokenize(sentence);
+  it ('splits strings to an array of words', function(){
+    var sentence = "hello world";
+    var tokenizedSentence = word.tokenize(sentence);
 
-  expect(tokenizedSentence).to.include.members(["hello", "world"]);
+    expect(tokenizedSentence).to.include.members(["hello", "world"]);
+  });
 });
