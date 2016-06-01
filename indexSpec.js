@@ -3,6 +3,13 @@ var expect = require('chai').expect;
 var word = require('./index');
 
 describe('Sanitize', function(){
+  // Hooks: initialize database before, close files after tests, etc
+  // before(function(){})
+  // beforeEach(function(){})
+  // after(function(){})
+  // afterEach(function(){})
+
+  // to run just this test, change to "it.only"
   it ('returns lowercase of a string', function(){
     var inputWord = 'HELLO WORLD';
     var outputWord = word.sanitize(inputWord);
@@ -14,10 +21,11 @@ describe('Sanitize', function(){
     expect(outputWord).to.contain('hello');
   });
 
+  // to skip this test, change to "it.skip"
   it ('removes any hyphen', function(){
     var inputWord = 'HELLO-WORLD';
     var outputWord = word.sanitize(inputWord);
 
     expect(outputWord).to.equal('hello world');
-  })
+  });
 })
