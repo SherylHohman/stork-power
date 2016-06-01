@@ -28,4 +28,11 @@ describe('Sanitize', function(){
 
     expect(outputWord).to.equal('hello world');
   });
-})
+});
+
+describe('Tokenize', function(){
+  var sentence = "hello world";
+  var tokenizedSentence = word.tokenize(sentence);
+
+  expect(tokenizedSentence).to.include.members(["hello", "world"]);
+});
