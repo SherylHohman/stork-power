@@ -11,7 +11,7 @@ var webpackConfig = {
   devtool: 'source-map',
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style!css!''}
+      { test: /\.css$/, loader: 'style!css!'}
     ]
   },
   plugins: [new HtmlWebpackPlugin(),    // generates default index.html
