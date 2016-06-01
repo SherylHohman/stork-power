@@ -38,3 +38,15 @@ describe('Tokenize', function(){
     expect(tokenizedSentence).to.include.members(["hello", "world"]);
   });
 });
+
+describe('Github info - test asynch function with https', function(){
+  it ('return repo info from github', function(){
+    word.info(function(callbackReply){
+      console.log(callbackReply);
+    });
+  });
+});
+
+
+
+
