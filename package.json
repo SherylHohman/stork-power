@@ -34,6 +34,7 @@
     "css-loader": "^0.23.1",
     "html-webpack-plugin": "^2.17.0",
     "mocha": "^2.5.3",
+    "selenium-webdriver": "^2.53.2",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.13.1",
