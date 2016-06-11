@@ -2,6 +2,10 @@ var chai = require('chai');
 var expect = require('chai').expect;
 var word = require('../index');
 
+var sinon = require('sinon');
+var sinonChai = require('sinon-chai');
+chai.use(sinonChai);
+
 describe('Sanitize', function(){
   // Hooks: initialize database before, close files after tests, etc
   // before(function(){})
@@ -39,19 +43,24 @@ describe('Tokenize', function(){
   });
 });
 
-describe('Github info - test asynch function with https', function(){
-  // must pass "done" into the callback, and call done()
-  // so that Mocha knows when to run its test: for asynch callback functions
-  it ('return repo info from github', function(done){
-    // reply is the response we get back from our API call
-    word.info(function(reply){
-      expect(reply.language).to.equal('JavaScript');
-      expect(reply.watchers).to.be.a('number');
-      // on command line may neet to run:
-      // mocha --timout 5000
-      // so there is time for the API call to send its response
-      done();
+
+// use sinon/sinon-chai to create a stub for mocking the github API call
+describe('infoLang: from github call (via sinon stub)' , function(){
+  it('return language used in "github" repo', function(done){
+    ghRepoReply = {
+      'language': 'Assembly'
+    };
+    var stub_for_wordInfoFunc = sinon.stub().callsArgWith(0, ghRepoReply);
+
+    // here we pass in stub instead of word.info
+    // as we don't want to make the actual API call
+    word.infoLang(stub_for_wordInfoFunc, function(reply){
+      expect(reply).to.equal('Language is Assembly');
+      console.log('\tHELLO, ', reply);
     });
+
+    // remember must call our asynch callback param
+    done();
   });
 });
 

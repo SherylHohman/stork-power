@@ -34,3 +34,13 @@ exports.info = function(callback){
   })
   .end();
 };
+
+exports.infoLang = function(infoFunc, callback){
+  // infoFunc is the exports.info function above
+  //  Actually it'll be the sinon stub version, representing the info func above !
+  // reply is the reply from the [github] API call / stub "reply"all
+  // callback is the asynch-safe return value from this function
+  infoFunc(function(reply){
+    callback('Language is ' + reply.language);
+  });
+};
