@@ -40,9 +40,12 @@ describe('Tokenize', function(){
 });
 
 describe('Github info - test asynch function with https', function(){
-  it ('return repo info from github', function(){
+  // must pass "done" into the callback, and call done()
+  // so that Mocha knows when to run its test: for asynch callback functions
+  it ('return repo info from github', function(done){
     word.info(function(callbackReply){
       console.log(callbackReply);
+      done();
     });
   });
 });
