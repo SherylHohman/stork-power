@@ -48,5 +48,8 @@
       ],
       "data-cover-never": "node_modules"
     }
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
