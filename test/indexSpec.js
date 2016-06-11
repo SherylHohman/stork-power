@@ -43,8 +43,13 @@ describe('Github info - test asynch function with https', function(){
   // must pass "done" into the callback, and call done()
   // so that Mocha knows when to run its test: for asynch callback functions
   it ('return repo info from github', function(done){
-    word.info(function(callbackReply){
-      console.log(callbackReply);
+    // reply is the response we get back from our API call
+    word.info(function(reply){
+      expect(reply.language).to.equal('JavaScript');
+      expect(reply.watchers).to.be.a('number');
+      // on command line may neet to run:
+      // mocha --timout 5000
+      // so there is time for the API call to send its response
       done();
     });
   });
