@@ -1,6 +1,6 @@
 var chai = require('chai');
 var expect = require('chai').expect;
-var word = require('../index');
+var word = require('../client/sample');
 
 var sinon = require('sinon');
 var sinonChai = require('sinon-chai');
