@@ -20,9 +20,21 @@ describe('from Homepage', function(){
     client.quit().then(function(){
       done();
     })
-  });
+  })
 
-  it('returns the title of the page')
-  it('returns the h1 of the page')
+  it('returns the title of the page', function(done){
+    client.getTitle().then(function(title){
+      expect(title).to.equal('Browser Testing');
+      done();
+    });
+  })
+
+
+  it('returns the h1 of the page', function(done){
+    client.findElement(webdriver.By.id('header')).getText().then(function(text){
+      expect(text).to.equal('Hello World');
+    done();
+    })
+  })
 
 });
