@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/SherylHohman/stork-power#readme",
   "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
     "blanket": "^1.2.3",
     "chai": "^3.5.0",
     "css-loader": "^0.23.1",
@@ -41,14 +42,23 @@
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
+
   "config": {
     "blanket": {
       "pattern": [
-        "index.js", "sample.js"
+        "index.js",
+        "sample.js"
       ],
       "data-cover-never": "node_modules"
     }
   },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "plugins": [],
+
   "dependencies": {
     "express": "^4.13.4"
   }
