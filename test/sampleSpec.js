@@ -1,8 +1,8 @@
-var chai = require('chai');
+var chai   = require('chai');
 var expect = require('chai').expect;
-var word = require('../client/sample');
+var word   = require('./../src/client/sample');
 
-var sinon = require('sinon');
+var sinon     = require('sinon');
 var sinonChai = require('sinon-chai');
 chai.use(sinonChai);
 
@@ -45,21 +45,21 @@ describe('Tokenize', function(){
 
 
 // use sinon/sinon-chai to create a stub for mocking the github API call (delete the Mocha-chai version)
-describe('infoLang: from github call (via sinon stub)' , function(){
+describe('infoLang: from (sinon stub for github call)' , function(){
   it('return language used in "github" repo', function(done){
     ghRepoReply = {
-      'language': 'Assembly'
+      'language': 'JavaScript'
     };
     var stub_for_wordInfoFunc = sinon.stub().callsArgWith(0, ghRepoReply);
 
     // here we pass in stub instead of word.info
     // as we don't want to make the actual API call
     word.infoLang(stub_for_wordInfoFunc, function(reply){
-      expect(reply).to.equal('Language is Assembly');
+      expect(reply).to.equal('Language is JavaScript');
       console.log('\tHELLO, ', reply);
     });
 
-    // remember must call our asynch callback param
+    // remember: must call our asynch callback param !
     done();
   });
 });
