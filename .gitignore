@@ -3,6 +3,18 @@ node_modules
 ## test coverage results files
 coverage.html
 
+# will contain the bundled files for the development environment.
+build/
+
+#is a file npm creates when every time an error occurs.
+npm-debug.log
+
+#----------------
+# Icon must end with two \r
+Icon
+
+
+#------------------
 ### Sublime
 # workspace files are user-specific
 *.sublime-workspace
@@ -11,13 +23,53 @@ coverage.html
 # proportion of contributors will probably not be using SublimeText
 # *.sublime-project
 
-### Mac
-*.DS_Store
+#-----------------
+ # from Sayanee dot files #
+###################
+.DS_Store
+*.swp
 
-# Icon must end with two \r
-Icon
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 
-# Thumbnails
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+.DS_Store
+.DS_Store?
 ._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 
+# Cache an Temp Files #
+#######################
+.sass-cache
