@@ -1,7 +1,9 @@
-var express = require('express');
-var app = express();
+var static = require('koa-static');
+var koa = require('koa');
+var app = koa();
 
-app.use(express.static(__dirname + './../client'));
+// add middleware
+app.use(static(__dirname + './../client'));
 
 
 module.exports = app;

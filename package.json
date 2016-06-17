@@ -1,17 +1,15 @@
 {
-  "name"        : "workout-tracker",
-  "version"     : "1.0.0",
-  "description" : "Run statistics on workouts entered. Import and Export your data, so you always have access to it.",
-
-  "main"   : "index.js",
-  "scripts"   : {
-    "compile" : "src/client/sample-es2015.js -o build/sample-es2015.js",
-    "test"    : "mocha && mocha test --require blanket --reporter html-cov > test/coverage.html"
+  "name": "workout-tracker",
+  "version": "1.0.0",
+  "description": "Run statistics on workouts entered. Import and Export your data, so you always have access to it.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "src/client/sample-es2015.js -o build/sample-es2015.js",
+    "test": "mocha && mocha test --require blanket --reporter html-cov > test/coverage.html"
   },
-
   "repository": {
-    "type" : "git",
-    "url"  : "git+https://github.com/SherylHohman/stork-power.git"
+    "type": "git",
+    "url": "git+https://github.com/SherylHohman/stork-power.git"
   },
   "keywords": [
     "workout",
@@ -28,10 +26,9 @@
   "author": "Sheryl Hohman",
   "license": "ISC",
   "bugs": {
-    "url"   : "https://github.com/SherylHohman/stork-power/issues"
+    "url": "https://github.com/SherylHohman/stork-power/issues"
   },
   "homepage": "https://github.com/SherylHohman/stork-power#readme",
-
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
     "blanket": "^1.2.3",
@@ -61,8 +58,10 @@
     ]
   },
   "plugins": [],
-
   "dependencies": {
-    "express": "^4.13.4"
+    "koa": "^1.2.0",
+    "koa-cors": "0.0.16",
+    "koa-route": "^2.4.2",
+    "koa-static": "^2.0.0"
   }
 }

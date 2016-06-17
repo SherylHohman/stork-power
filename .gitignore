@@ -1,3 +1,6 @@
+## files prefixed with x- are ones I intend to delete.  Don't commit
+x-*.*
+
 node_modules
 
 ## test coverage results files
