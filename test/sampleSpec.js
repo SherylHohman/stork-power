@@ -47,7 +47,7 @@ describe('Tokenize', function(){
 // use sinon/sinon-chai to create a stub for mocking the github API call (delete the Mocha-chai version)
 describe('infoLang: from (sinon stub for github call)' , function(){
   it('return language used in "github" repo', function(done){
-    ghRepoReply = {
+    var ghRepoReply = {
       'language': 'JavaScript'
     };
     var stub_for_wordInfoFunc = sinon.stub().callsArgWith(0, ghRepoReply);
